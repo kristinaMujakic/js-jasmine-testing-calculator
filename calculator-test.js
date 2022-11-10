@@ -15,7 +15,15 @@ it("should return a result with 2 decimal places", function () {
     years: 10,
     rate: 3
   };
-  expect(calculateMonthlyPayment(values)).toEqual('193.60')
+  expect(calculateMonthlyPayment(values)).toBe('193.60')
 });
 
+it('should return a string'), function () {
+  let values = {
+    amount: 20000,
+    years: 10,
+    rate: 3
+  };
+  expect(calculateMonthlyPayment(values)).toBeInstanceOf(String);
+}
 
